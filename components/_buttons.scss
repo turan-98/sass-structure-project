@@ -1,0 +1,73 @@
+$button-size-low-priority:5rem;  // 50px
+
+$button-size-medium-priority:10rem; // 100px
+
+$button-size-high-priority:12rem; //120 px
+
+$button-padding:1rem; // 10px
+
+$font-size:1.5rem;  //15px
+
+$color-sucess:#2EE59D;
+
+$color-cancelar:#ff7675;
+
+$base-color:#fff;
+
+$none-state:none;
+
+
+/*           Estrutura para os btns            */
+.btn-sucess,.btn-cancelar, .disabled{
+  // margim apenas para exemplo
+    margin: 1rem;
+    font-size:$font-size;
+    cursor:pointer;
+    padding:$button-padding;
+    width:$button-size-medium-priority;
+    border-radius:4px;
+    transition:all ease 0.3s;
+}
+
+
+/*         mudanças individuas para btns sucess                 */
+.btn-sucess{
+    background:$none-state;
+    border:1px solid $color-sucess;
+    box-shadow: 0px 8px 15px rgba(46, 229, 157, 0.2);
+    &:hover{
+        background:$color-sucess;
+        color:$base-color;
+        transform:translatey(-7px);
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      }
+}
+
+/*         mudanças individuas para btns cancalar                */
+.btn-cancelar{
+    background: $color-cancelar;
+    border:$none-state;
+    opacity:0.8;
+    box-shadow:0px 8px 15px rgba(255,118,117, 0.2);
+        &:hover{
+             transform:translatey(-7px);
+             box-shadow:0px 15px 20px rgba(255,118,117, 0.4);
+             opacity:1;
+        }
+    
+}
+
+
+/*         mudanças individuas para btns disabled             */
+.disabled{
+    border:$none-state;
+    background: $color-disabled;
+    opacity:.5;
+    cursor:not-allowed;
+        &:hover{
+            background: $color-sucess;
+            border:1px solid $color-sucess;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            opacity:1;
+        }
+}

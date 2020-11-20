@@ -1,0 +1,42 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/functions';
+
+/* ==================   */
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.o-header,
+.o-main,
+.o-footer {
+    margin: $normal-size;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.o-main {
+    border: 1px solid rebeccapurple;
+}
+
+.o-main>p {
+    font-size: 1.5rem;
+    line-height: 2 * 15px;
+    text-align: left;
+}
+
+.o-footer,
+.o-header {
+    border: 1px solid rebeccapurple;
+    font-size: 1.5rem;
+}
+
+.o-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
